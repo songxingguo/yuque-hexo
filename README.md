@@ -58,6 +58,12 @@ A downloader for articles from yuque（语雀知识库同步工具）
   - mac / linux: `YUQUE_TOKEN=xxx SECRET_ID=xxx SECRET_KEY=xxx yuque-hexo sync`
   - windows: `set YUQUE_TOKEN=xxx SECRET_ID=xxx SECRET_KEY=xxx && yuque-hexo sync`
 
+### 配置 文章SLUG(publish必传)
+
+- 在设置YUQUE_TOKEN的基础上配置SLUG
+- 命令执行时传入环境变量
+  - mac / linux: `YUQUE_TOKEN=xxx SLUG=xxx yuque-hexo publish`
+  - windows: `set YUQUE_TOKEN=xxx SLUG=xxx && yuque-hexo publish`
 
 ### 配置知识库
 
@@ -181,12 +187,19 @@ yuque-hexo sync
 yuque-hexo clean
 ```
 
+## Publish
+
+```
+yuque-hexo publish
+```
+
 ## Npm Scripts
 
 ```json
 {
   "sync": "yuque-hexo sync",
-  "clean:yuque": "yuque-hexo clean"
+  "clean:yuque": "yuque-hexo clean",
+  "publish": "yuque-hexo publish"
 }
 ```
 
